@@ -20,6 +20,8 @@ notes for Udemy course
 - `live-server public` # to start the server, `public` is where I saved my code (html and app.js - the one returned by babel)
 - `babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch` # babel will watch for changes in src/app.js and compile, and browser should reload everytime we update and save src/app.js
 
+- Text editor: Visual Studio + Extension: ESLint
+
 -------------------
 
 ### Start coding:
@@ -90,3 +92,43 @@ and the 2nd parameter:  `var appRoot = document.getElementById("app")`, you can 
 - when using `var`, you can redefine the same variable without noticing that the name has also already been define before
 - `let`, doesn't allow redefine, but can reassign
 - `const`, cannot redefine, cannot reassign
+
+#### arrow function
+(anonymous function in es6, similar to lambda function in Python)
+e.g.
+```
+//es5
+const square = function (x) {
+    return x * x;
+}
+
+function squareTwo (x) {
+    return x * x;
+}
+
+//es6
+const squareArrow = (x) => {
+    return x * x;
+}
+const squareArrowTwo = (x) => x * x;
+console.log(squareArrow(9))
+```
+
+How to convert?
+1 - remove `function` keyword
+2 - add `=>` after (arguments)
+
+
+**Playground
+```
+const render = () => {
+    const jsx = (
+        <div>
+            <h1>Header</h1>
+        </div>
+
+    );
+    ReactDOM.render(jsx, document.getElementById('app'))
+};
+render();
+```
