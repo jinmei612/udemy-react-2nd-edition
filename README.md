@@ -166,3 +166,19 @@ class SE extends Person {
     }
 }
 ```
+
+### Props vs. State
+
+Props 
+- An object
+- Can be used when rendering
+- Changes (from parent) cause re-renders
+- Comes from above (parent)
+- Can't be changed by component itself
+
+State
+- An object
+- Can be used when rendering
+- Changes cause re-renders
+- Defined in component itself
+- Can be changed by component itself
