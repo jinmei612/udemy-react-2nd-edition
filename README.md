@@ -134,11 +134,11 @@ render();
 ```
 
 #### Class
-constructor -
+`constructor` -
 
-extends - 
+`extends` - 
 
-super -
+`super` -
 
 
 ```
@@ -182,3 +182,35 @@ State
 - Changes cause re-renders
 - Defined in component itself
 - Can be changed by component itself
+
+### Stateless function
+
+The below 2 code blocks do the same job:
+
+- use class if you need to use state
+
+```
+class Header extends React.Component {
+    render() {
+        return (
+            <div>
+                <h1>{this.props.title}</h1>
+                <h2>{this.props.subtitle}</h2>
+            </div>
+        );
+    }
+}
+```
+
+- otherwise, use this method, it will be faster
+
+```
+const Header = (props) => {
+    return (
+        <div>
+            <h1>{props.title}</h1>
+            <h2>{props.subtitle}</h2>
+        </div>
+    );
+};
+```
