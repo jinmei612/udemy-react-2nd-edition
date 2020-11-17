@@ -214,3 +214,6 @@ const Header = (props) => {
     );
 };
 ```
+
+### react component lifecycle
+https://reactjs.org/docs/react-component.html
