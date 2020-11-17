@@ -119,7 +119,7 @@ How to convert?
 2 - add `=>` after (arguments)
 
 
-**Playground
+**Playground**
 ```
 const render = () => {
     const jsx = (
@@ -131,4 +131,38 @@ const render = () => {
     ReactDOM.render(jsx, document.getElementById('app'))
 };
 render();
+```
+
+#### Class
+constructor -
+
+extends - 
+
+super -
+
+
+```
+class Person {
+    constructor(name = 'N/A', id = 0) {
+        this.name = name;
+        this.id = id;
+    }
+    Somefunction() {
+        return `Hi. I am ${this.name}`;
+}
+```
+
+```
+class SE extends Person {
+    constructor(name = 'N/A', id = 0, currentSpec, pastSpec, ticketToday, thresholdToday) {
+        super(name, id);
+        this.currentSpec = currentSpec;
+        this.pastSpec = pastSpec;
+        this.ticketToday = ticketToday;
+        this.thresholdToday = thresholdToday;
+    }
+    metThreshold() {
+        return this.ticketToday - this.thresholdToday >= 0;
+    }
+}
 ```
